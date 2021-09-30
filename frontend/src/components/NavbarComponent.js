@@ -12,11 +12,11 @@ function NavbarComponent() {
    
      <Navbar bg="light" variant="light">
      <Container>
-     {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
-     <Nav className="mr-auto">
+ 
+     <Nav className="ml-auto">
        <Nav.Link href="/ProductDetails">Products Detail</Nav.Link>
        <Nav.Link href="/Cart">Cart</Nav.Link>
-       {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
+     
      </Nav>
      </Container>
    </Navbar>
