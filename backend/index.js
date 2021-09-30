@@ -25,9 +25,16 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to the application." });
 });
 
+<<<<<<< Updated upstream
 app.get("/api/auth/x", (req,res) => {
   controller.login
 })
+=======
+app.get("/api/auth/x", (req, res) => {
+  
+});
+
+>>>>>>> Stashed changes
 
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);

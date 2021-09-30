@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose"),Admin = mongoose.mongo.Admin;;
 require('dotenv').config({ path:'config.env' });
 
 const { MONGO_URI } = process.env;
@@ -15,5 +15,13 @@ exports.connect = () => {
       console.log("Database connection failed.");
       console.error(error);
       process.exit(1);
+<<<<<<< Updated upstream
     });
 };
+=======
+  }
+}
+
+
+module.exports=connectDB;
+>>>>>>> Stashed changes
