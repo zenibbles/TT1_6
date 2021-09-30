@@ -10,7 +10,7 @@ import NavbarComponent from "./components/NavbarComponent";
 function App() {
   return (
       <Router>
-          <NavbarComponent/>
+          
       <div className={"wrapper"}>
           <Route path={"/login"} component={Login}/>
 

@@ -270,6 +270,7 @@ export default function ProductDetails(){
     }
     return(
         <div>
+            <NavbarComponent/>
             {catedetails.map((catedetail, idx) => (
                 <tr key={idx}>
                     <Tabs defaultActiveKey="1" id="categories_tab" className="categories_tab">
@@ -285,7 +286,6 @@ export default function ProductDetails(){
             ))}
 
 
-        <NavbarComponent/>
 
             {itemdetails.map((itemdetail, idx) => (
                 <Card key ={idx} style={{ width: '18rem' }}>
