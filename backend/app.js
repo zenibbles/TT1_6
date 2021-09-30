@@ -1,3 +1,11 @@
 require("dotenv").config();
-console.log(__dirname+'/database/dbconnection');
 require(__dirname+'/database/dbconnection.js').connect();
+const express = require("express");
+
+const app = express();
+app.use(express.json());
+
+
+
+
+module.exports = app;
