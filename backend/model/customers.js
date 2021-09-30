@@ -9,7 +9,7 @@ var CustomerSchema = new Schema({
 	},
 	password: {
 		type: String,
-		require: 'Password is required'
+		require: 'Password is required',
 	},
 	first_name: {
 		type: String,
@@ -20,12 +20,18 @@ var CustomerSchema = new Schema({
 		required: 'Last Name is required'
 	},
 	postal_code: {
-		type: Number,
-		required: 'Stock is required'
+		type: String,
+		required: 'Stock is required',
+		minlength: 6,
+		maxlength: 6
 	},
 	gender: {
 		type: String,
-		required: 'Gender is required'
+		required: 'Gender is required',
+		enum: {
+			values: ['Male', 'Female'],
+			message: '${VALUE} not supported'
+		}
 	},
 	created_at: {
 		type: String,
