@@ -1,5 +1,9 @@
 import React, {Component,useEffect, useState} from 'react';
+<<<<<<< HEAD
+import NavbarComponent from "./NavbarComponent";
+=======
 import axios from 'axios';
+>>>>>>> 1ef4ac585ca9b6dadadde32b104fb39160e8bb81
 
 export default function ProductDetails(){
     const [details, setDetails] = useState([]);
@@ -30,6 +34,9 @@ export default function ProductDetails(){
         }
     }
     return(
+        <>
+        <NavbarComponent/>
         <h1>Product Details Page</h1>
+        </>
     )
 }

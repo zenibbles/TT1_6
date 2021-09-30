@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import NavbarComponent from "./NavbarComponent";
 
 export default function Cart(){
 

@@ -2,7 +2,8 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
 const isLoggedIn = () => {
-    return localStorage.getItem('accessToken');
+    // return localStorage.getItem('accessToken');
+    return true;
 };
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
