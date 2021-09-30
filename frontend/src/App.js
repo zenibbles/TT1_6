@@ -5,24 +5,19 @@ import Login from'./components/Login'
 import ProductDetails from'./components/ProductDetails'
 import PrivateRoute from "./components/PrivateRoute";
 import Cart from "./components/Cart";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import NavbarComponent from "./components/NavbarComponent";
 
 function App() {
   return (
       <Router>
+          <NavbarComponent/>
       <div className={"wrapper"}>
-        <Switch>
           <Route path={"/login"} component={Login}/>
-          <Route path={"/"} component={Login}/>
-        </Switch>
 
-        <div className={"contentWrapper"}>
-          <Switch>
-            <PrivateRoute exact path={"/productdetails"} component={ProductDetails}/>
-            <PrivateRoute exact path={"/cart"} component={Cart}/>
-          </Switch>
-        </div>
+      <Switch>
+        <PrivateRoute exact path={"/productdetails"} component={ProductDetails}/>
+        <PrivateRoute exact path={"/cart"} component={Cart}/>
+      </Switch>
 
 
       </div>

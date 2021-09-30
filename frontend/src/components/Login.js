@@ -17,7 +17,7 @@ export default function Login(){
         history.push('productdetails');
 
         try{
-            const response = await axios.post()
+            const response = await axios.post("http://127.0.0.1:5000");
             if(response.status == 200){
                 localStorage.setItem('accessToken',true);
                 
@@ -30,7 +30,7 @@ export default function Login(){
             }
         }
         catch(error){
-            alert(error.message);
+
         }
     }
 
