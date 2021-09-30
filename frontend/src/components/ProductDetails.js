@@ -16,7 +16,7 @@ export default function ProductDetails(){
             alert(error.message);
         }
     }
-/*
+
     const CateData= () => {
         return details.map((detail,index) => {
             const{id,name,description,image} =detail;
@@ -28,8 +28,8 @@ export default function ProductDetails(){
                     <td>{image}</td>
                 </tr>
             )
-        }
-    }*/
+        })
+    }
     return(
         <>
         <NavbarComponent/>
