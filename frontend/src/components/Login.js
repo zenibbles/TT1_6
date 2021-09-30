@@ -10,15 +10,19 @@ export default function Login(){
     const [status,setStatus] = useState(localStorage.getItem('accessToken'));
     let history = useHistory();
 
+
     const handleSubmit = async(event) =>{
         event.preventDefault()
-
+        localStorage.setItem('accessToken',true);
+        history.push('productdetails');
+        /*
         try{
             const response = await axios.post()
             if(response.status == 200){
                 localStorage.setItem('accessToken',true);
+                
                 localStorage.setItem('first_name',response.first_name);
-                localStorage.setItem('first_name',response.first_name);
+                localStorage.setItem('cust_id',response.id);
 
                 history.push('productdetails');
 
@@ -27,7 +31,7 @@ export default function Login(){
         }
         catch(error){
             alert(error.message);
-        }
+        }*/
     }
 
     const updatePassword = (event) => {
