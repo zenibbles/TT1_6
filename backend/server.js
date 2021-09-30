@@ -13,8 +13,6 @@ const app = express();
 // log requests using morgan
 app.use(morgan('tiny'));
 
-// mongoDB connection
-connectDB();
  
 // parse request using body-parser
 app.use(bodyparser.urlencoded({extended: true}));
