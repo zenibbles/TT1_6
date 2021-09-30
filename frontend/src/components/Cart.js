@@ -1,6 +1,26 @@
 import React, {Component} from 'react';
 import NavbarComponent from "./NavbarComponent";
+/*
 import { useState } from 'react';
+
+
+function App() {
+    const [counter, setCounter] = useState(1);
+    const incrementCounter = () => setCounter(counter + 1);
+    let decrementCounter = () => setCounter(counter - 1);
+    if(counter<=0) {
+      decrementCounter = () => setCounter(1);
+    }
+    return (
+      <div> 
+        <ButtonIncrement onClickFunc={incrementCounter}/>
+        <Display message={counter}/> 
+        <ButtonDecrement onClickFunc={decrementCounter}/>
+      </div>
+    );
+  }
+
+  export default App;
 
 function ButtonIncrement(props) {
   
@@ -23,38 +43,24 @@ function Display(props) {
   return (
     <label style={{ marginLeft: '.5rem'}} >{props.message}</label>
   )
-}
+}*/
 
-
-function App() {
-    const [counter, setCounter] = useState(1);
-    const incrementCounter = () => setCounter(counter + 1);
-    let decrementCounter = () => setCounter(counter - 1);
-    if(counter<=0) {
-      decrementCounter = () => setCounter(1);
+    const mystyle = {
+        margin:"",
+        padding:"100px",
+        fontFamily: "Arial"
     }
-    return (
-      <div> 
-        <ButtonIncrement onClickFunc={incrementCounter}/>
-        <Display message={counter}/> 
-        <ButtonDecrement onClickFunc={decrementCounter}/>
-      </div>
-    );
-  }
 
 export default function Cart(){
 
     return(
         <html>
             <head>
-                <style>
-                    
-                </style>
             </head>
             
             <NavbarComponent/>
-        <h1>Cart Page</h1>
-        <table>
+        <h1 style={{textAlign: "center"}}>Cart Page</h1>
+        <table style={{tableAlign: "center"}}>
             <tr>
                 <th>Product</th>
                 <th>Quantity</th>
@@ -62,9 +68,9 @@ export default function Cart(){
             </tr>
 
             <tr>
-                <td>Bag</td>
-                <td>50</td>
-                <td><button type="submit" value="Submit">+</button>    <button type="submit" value="Submit">-</button></td>
+                <td>Fjallraven</td>
+                <td><button type="submit" value="Submit">+</button>    <button type="submit" value="Submit">-</button>    50</td>
+                <td>109.95</td>
             </tr>
         </table>
         <button type="submit" value="Submit">Checkout</button>
