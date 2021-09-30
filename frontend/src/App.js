@@ -5,6 +5,7 @@ import Login from'./components/Login'
 import ProductDetails from'./components/ProductDetails'
 import PrivateRoute from "./components/PrivateRoute";
 import Cart from "./components/Cart";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
