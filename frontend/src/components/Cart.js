@@ -5,27 +5,30 @@ export default function Cart(){
 
     return(
         <>
-        <NavbarComponent/>
+            
+            <NavbarComponent/>
         <h1>Cart Page</h1>
-        </>
-        // <html>
-        // <h1>Cart Page</h1>
-        // <table>
-        //     <tr>
-        //     <th>Product</th>
-        //     <th>Quantity</th>
-        //     </tr>
-        //     <tr>
-        //         <td>Bag</td>
-        //         <td>50</td>
-                
-        //     </tr>
-        // </table>
-        // </html>
-        
-      
+        <table>
+            <tr>
+                <th style = {{ color: "blue" }}>Product</th>
+                <th>Quantity</th>
+                <td>Price</td>
+            </tr>
 
-    
+            <tr>
+                <td>Bag</td>
+                <td>50</td>
+                <td><button type="submit" value="Submit">Quantity</button></td>
+            </tr>
+        </table>
+        <button type="submit" value="Submit">Checkout</button>
+
+        
+    <button type="button" onClick="click()">Click me</button>
+    <p>Clicks: <a id="clicks">0</a></p>
+        
+        </>
+
 
     )
 
