@@ -1,5 +1,10 @@
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route, Switch, Redirect, useHistory} from 'react-router-dom';
+import React, {Component} from 'react';
 import './App.css';
+import Login from'./components/Login'
+import ProductDetails from'./components/ProductDetails'
+import PrivateRoute from "./components/PrivateRoute";
+import Cart from "./components/Cart";
 
 function App() {
   return (
