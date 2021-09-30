@@ -6,6 +6,7 @@ import ProductDetails from'./components/ProductDetails'
 import PrivateRoute from "./components/PrivateRoute";
 import Cart from "./components/Cart";
 
+
 function App() {
   return (
       <Router>
