@@ -3,6 +3,7 @@ const app = require("./app");
 const cors = require("cors")
 const bodyParser = require("body-parser");
 const server = http.createServer(app);
+const controller = require('./controllers/auth.controller')
 
 const { API_PORT } = process.env;
 const port = process.env.PORT || API_PORT;

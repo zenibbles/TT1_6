@@ -1,4 +1,4 @@
-const db = require("../model");
+const db = require("../model/customers");
 const Customer = db.customer;
 
 var bcrypt = require("bcryptjs");

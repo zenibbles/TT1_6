@@ -7,4 +7,5 @@ app.use(express.json());
 
 connectDB();
 
+
 module.exports = app;
