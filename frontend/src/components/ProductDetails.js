@@ -1,7 +1,7 @@
 import React, {Component,useEffect, useState} from 'react';
 import NavbarComponent from "./NavbarComponent";
 import axios from 'axios';
-import {Tab, Tabs, Image} from "react-bootstrap";
+import {Tab, Tabs, Image,Card,ListGroup,ListGroupItem} from "react-bootstrap";
 import './ProductDetails.css';
 
 export default function ProductDetails(){
@@ -272,32 +272,43 @@ export default function ProductDetails(){
         <div>
             {catedetails.map((catedetail, idx) => (
                 <tr key={idx}>
-        <Tabs defaultActiveKey="electronics" id="categories_tab" className="categories_tab">
+                    <Tabs defaultActiveKey="1" id="categories_tab" className="categories_tab">
 
-            <Tab eventKey="electronics" title={catedetail.name}>
-                <Image src={catedetail.image} width='100' height="150" />
-                <>{testClass()}</>
+                        <Tab eventKey={catedetail.id} title={catedetail.name}>
+                            <Image src={catedetail.image} width='100' height="150" />
+                            <></>
+                        </Tab>
 
-            </Tab>
 
-
-        </Tabs>
+                    </Tabs>
                 </tr>
             ))}
 
 
         <NavbarComponent/>
-        <h1>Product Details Page</h1>
-            <tbody className={"categories"}>
-            {catedetails.map((catedetail, idx) => (
-                <tr key={idx}>
-                    <th align="left">{catedetail.id}</th>
-                    <th scope="left">{catedetail.name}</th>
-                    <th scope="left">{catedetail.description}</th>
-                    <th scope="left"><img src={catedetail.image} width='100' height="150"/></th>
-                </tr>
+
+            {itemdetails.map((itemdetail, idx) => (
+                <Card key ={idx} style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={itemdetail.image} width='100' height="150"/>
+                    <Card.Body>
+                        <Card.Title>{itemdetail.title}</Card.Title>
+                        <Card.Text>
+                            {itemdetail.description}
+                        </Card.Text>
+                    </Card.Body>
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem>${itemdetail.price}</ListGroupItem>
+                        <ListGroupItem>Quantity Left:{itemdetail.qty}</ListGroupItem>
+                    </ListGroup>
+                    <Card.Body>
+                        <Card.Link href="#">Add to Cart</Card.Link>
+
+                    </Card.Body>
+                    <br/>
+                </Card>
             ))}
-            </tbody>
+
+
         </div>
     )
 }
