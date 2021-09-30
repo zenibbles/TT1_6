@@ -276,7 +276,7 @@ export default function ProductDetails(){
 
             <Tab eventKey="electronics" title={catedetail.name}>
                 <Image src={catedetail.image} width='100' height="150" />
-                <testClass/>
+                <>{testClass()}</>
 
             </Tab>
 
