@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-function generateToken(user) {
+exports.generateToken = (user) => {
   if (!user) return null;
 
   const u = {
