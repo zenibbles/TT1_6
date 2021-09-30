@@ -1,11 +1,10 @@
 require("dotenv").config();
-require(__dirname+'/database/dbconnection.js').connect();
 const express = require("express");
-
+const connectDB = require('./database/dbconnection')
 
 const app = express();
 app.use(express.json());
 
-
+connectDB();
 
 module.exports = app;
